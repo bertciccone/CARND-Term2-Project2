@@ -161,6 +161,7 @@ void UKF::Prediction(double delta_t) {
   */
 
   /* CREATE AUGMENTED SIGMA POINTS */
+  /* Lesson 7, Section 18 */
 
   //create augmented state vector
   x_aug_ = VectorXd(n_aug_);
@@ -197,13 +198,15 @@ void UKF::Prediction(double delta_t) {
   }
 
   /* PREDICT SIGMA POINTS */
+  /* Lesson 7, Section 21 */
 
   //predict sigma points
   //avoid division by zero
   //write predicted sigma points into right column
   
   for (int i = 0; i < n_sig_; ++i) {
-    
+    double px = Xsig_aug_(0, i);
+    double py = Xsig_aug_(1, i);
     double vel = Xsig_aug_(2, i); // magnituded of velocity
     double psi = Xsig_aug_(3, i); // yaw angle
     double psi_dot = Xsig_aug_(4, i); // rate of change of yaw angle
@@ -219,47 +222,35 @@ void UKF::Prediction(double delta_t) {
     if (psi_dot) {
       // yaw rate psi dot is not zero; use first formula
       Xsig_pred_(0, i) =
-        Xsig_aug_(0, i) +
+        px +
         vel_div_psi_dot * (sin(psi_plus_psi_dot_delta_t) - sin_psi) +
         one_half_delta_t_squared * cos_psi * nu_a;
       Xsig_pred_(1, i) =
-        Xsig_aug_(1, i) +
+        py +
         vel_div_psi_dot * (-cos(psi_plus_psi_dot_delta_t) + cos_psi) +
         one_half_delta_t_squared * sin_psi * nu_a;
       Xsig_pred_(2, i) =
-        Xsig_aug_(2, i) +
-        0 +
-        delta_t * nu_a;
+        vel + 0 + delta_t * nu_a;
       Xsig_pred_(3, i) =
-        Xsig_aug_(3, i) +
-        psi_dot_mult_delta_t +
-        one_half_delta_t_squared * nu_psi_dot_dot;
+        psi + psi_dot_mult_delta_t + one_half_delta_t_squared * nu_psi_dot_dot;
       Xsig_pred_(4, i) =
-        Xsig_aug_(4, i) +
-        0 +
-        delta_t * nu_psi_dot_dot;
+        psi_dot + 0 + delta_t * nu_psi_dot_dot;
     } else {
       // yaw rate psi dot is zero; use second formula
       Xsig_pred_(0, i) =
-        Xsig_aug_(0, i) +
+        px +
         vel * cos_psi * delta_t +
         one_half_delta_t_squared * cos_psi * nu_a;
       Xsig_pred_(1, i) =
-        Xsig_aug_(1, i) +
+        py +
         vel * sin_psi * delta_t +
         one_half_delta_t_squared * sin_psi * nu_a;
       Xsig_pred_(2, i) =
-        Xsig_aug_(2, i) +
-        0 +
-        delta_t * nu_a;
+        vel + 0 + delta_t * nu_a;
       Xsig_pred_(3, i) =
-        Xsig_aug_(3, i) +
-        psi_dot_mult_delta_t +
-        one_half_delta_t_squared * nu_psi_dot_dot;
+        psi + psi_dot_mult_delta_t + one_half_delta_t_squared * nu_psi_dot_dot;
       Xsig_pred_(4, i) =
-        Xsig_aug_(4, i) +
-        0 +
-        delta_t * nu_psi_dot_dot;
+        psi_dot + 0 + delta_t * nu_psi_dot_dot;
     }
 
     /* PREDICT MEAN AND COVARIANCE */

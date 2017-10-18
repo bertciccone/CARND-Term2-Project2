@@ -28,15 +28,25 @@ UKF::UKF() {
 
   // initial state vector
   x_ = VectorXd(n_x_);
+  x_.setZero();
 
   // initial covariance matrix
   P_ = MatrixXd(n_x_, n_x_);
+  P_.setIdentity();
 
   // calculate the number of sigma points
   n_sig_ = 2 * n_aug_ + 1;
 
   ///* predicted sigma points matrix
   Xsig_pred_ = MatrixXd(n_aug_, n_sig_);
+  Xsig_pred_.setZero();
+
+  ///* Weights of sigma points
+  weights_ = VectorXd(n_sig_);
+  weights_(0) = lambda_ / (lambda_ + n_aug_);
+  for (int i = 1; i < n_sig_; ++i) {
+    weights_(i) = 1.0 / (2.0 * (lambda_ + n_aug_));
+  }
 
   // Process noise standard deviation longitudinal acceleration in m/s^2
   std_a_ = 30; // TODO: experiment with this value
@@ -66,14 +76,6 @@ UKF::UKF() {
 
   Hint: one or more values initialized above might be wildly off...
   */
-
-  ///* Weights of sigma points
-  VectorXd weights_ = VectorXd(n_sig_);
-  weights_(0) = lambda_ / (lambda_ + n_aug_);
-  for (int i = 1; i < n_sig_; ++i) {
-    weights_(i) = 1.0 / (2.0 * (lambda_ + n_aug_));
-  }
-
 }
 
 UKF::~UKF() {}
@@ -94,10 +96,6 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
 
   if (!is_initialized_) {
     // we can now finish initialization that is dependent on first measurement
-
-    x_.setZero();
-
-    P_.setIdentity();
 
     if (meas_package.sensor_type_ == MeasurementPackage::LASER) {
       /**

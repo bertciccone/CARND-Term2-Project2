@@ -162,40 +162,38 @@ void UKF::Prediction(double delta_t) {
 
   /* CREATE AUGMENTED SIGMA POINTS */
 
-  //create augmented mean vector
-  VectorXd x_aug = VectorXd(n_aug_);
-
-  //create augmented mean state
-  x_aug.setZero();
-  x_aug.head(n_x_) = x_;
+  //create augmented state vector
+  x_aug_ = VectorXd(n_aug_);
+  x_aug_.setZero();
+  x_aug_.head(n_x_) = x_;
 
   //create augmented state covariance
-  MatrixXd P_aug = MatrixXd(n_aug_, n_aug_);
+  P_aug_ = MatrixXd(n_aug_, n_aug_);
 
   //create augmented covariance matrix
-  P_aug.setZero();
-  P_aug.topLeftCorner(P_.rows(), P_.cols()) = P_;
-  P_aug(P_aug.rows() - 2, P_aug.cols() - 2) = std_a_*std_a_;
-  P_aug(P_aug.rows() - 1, P_aug.cols() - 1) = std_yawdd_*std_yawdd_;
+  P_aug_.setZero();
+  P_aug_.topLeftCorner(P_.rows(), P_.cols()) = P_;
+  P_aug_(P_aug_.rows() - 2, P_aug_.cols() - 2) = std_a_*std_a_;
+  P_aug_(P_aug_.rows() - 1, P_aug_.cols() - 1) = std_yawdd_*std_yawdd_;
 
   //create square root matrix
-  MatrixXd A = P_aug.llt().matrixL();
+  MatrixXd A = P_aug_.llt().matrixL();
 
   //create augmented sigma points
 
   //create sigma point matrix
-  MatrixXd Xsig_aug = MatrixXd(n_aug_, n_sig_);
+  Xsig_aug_ = MatrixXd(n_aug_, n_sig_);
 
   //set first column of sigma point matrix
-  Xsig_aug.col(0) = x_aug;
+  Xsig_aug_.col(0) = x_aug_;
 
   // calculate square root of (lambda + n_x)
   double factor = sqrt(lambda_ + n_aug_);
 
   // calculate remaining sigma points
   for (int i = 0; i < n_aug_; ++i) {
-    Xsig_aug.col(i + 1) = x_aug + factor * A.col(i);
-    Xsig_aug.col(i + 1 + n_aug_) = x_aug - factor * A.col(i);
+    Xsig_aug_.col(i + 1) = x_aug_ + factor * A.col(i);
+    Xsig_aug_.col(i + 1 + n_aug_) = x_aug_ - factor * A.col(i);
   }
 
   /* PREDICT SIGMA POINTS */
@@ -206,11 +204,11 @@ void UKF::Prediction(double delta_t) {
   
   for (int i = 0; i < n_sig_; ++i) {
     
-    double vel = Xsig_aug(2, i); // magnituded of velocity
-    double psi = Xsig_aug(3, i); // yaw angle
-    double psi_dot = Xsig_aug(4, i); // rate of change of yaw angle
-    double nu_a = Xsig_aug(5, i); // from Lesson 7 Section 8, longitudinal acceleration noise
-    double nu_psi_dot_dot = Xsig_aug(6, i); // from Lesson 7 Section 8, yaw acceleration noise
+    double vel = Xsig_aug_(2, i); // magnituded of velocity
+    double psi = Xsig_aug_(3, i); // yaw angle
+    double psi_dot = Xsig_aug_(4, i); // rate of change of yaw angle
+    double nu_a = Xsig_aug_(5, i); // from Lesson 7 Section 8, longitudinal acceleration noise
+    double nu_psi_dot_dot = Xsig_aug_(6, i); // from Lesson 7 Section 8, yaw acceleration noise
     double vel_div_psi_dot = vel / psi_dot;
     double psi_dot_mult_delta_t = psi_dot * delta_t;
     double psi_plus_psi_dot_delta_t = psi + psi_dot_mult_delta_t;
@@ -221,45 +219,45 @@ void UKF::Prediction(double delta_t) {
     if (psi_dot) {
       // yaw rate psi dot is not zero; use first formula
       Xsig_pred_(0, i) =
-        Xsig_aug(0, i) +
+        Xsig_aug_(0, i) +
         vel_div_psi_dot * (sin(psi_plus_psi_dot_delta_t) - sin_psi) +
         one_half_delta_t_squared * cos_psi * nu_a;
       Xsig_pred_(1, i) =
-        Xsig_aug(1, i) +
+        Xsig_aug_(1, i) +
         vel_div_psi_dot * (-cos(psi_plus_psi_dot_delta_t) + cos_psi) +
         one_half_delta_t_squared * sin_psi * nu_a;
       Xsig_pred_(2, i) =
-        Xsig_aug(2, i) +
+        Xsig_aug_(2, i) +
         0 +
         delta_t * nu_a;
       Xsig_pred_(3, i) =
-        Xsig_aug(3, i) +
+        Xsig_aug_(3, i) +
         psi_dot_mult_delta_t +
         one_half_delta_t_squared * nu_psi_dot_dot;
       Xsig_pred_(4, i) =
-        Xsig_aug(4, i) +
+        Xsig_aug_(4, i) +
         0 +
         delta_t * nu_psi_dot_dot;
     } else {
       // yaw rate psi dot is zero; use second formula
       Xsig_pred_(0, i) =
-        Xsig_aug(0, i) +
+        Xsig_aug_(0, i) +
         vel * cos_psi * delta_t +
         one_half_delta_t_squared * cos_psi * nu_a;
       Xsig_pred_(1, i) =
-        Xsig_aug(1, i) +
+        Xsig_aug_(1, i) +
         vel * sin_psi * delta_t +
         one_half_delta_t_squared * sin_psi * nu_a;
       Xsig_pred_(2, i) =
-        Xsig_aug(2, i) +
+        Xsig_aug_(2, i) +
         0 +
         delta_t * nu_a;
       Xsig_pred_(3, i) =
-        Xsig_aug(3, i) +
+        Xsig_aug_(3, i) +
         psi_dot_mult_delta_t +
         one_half_delta_t_squared * nu_psi_dot_dot;
       Xsig_pred_(4, i) =
-        Xsig_aug(4, i) +
+        Xsig_aug_(4, i) +
         0 +
         delta_t * nu_psi_dot_dot;
     }

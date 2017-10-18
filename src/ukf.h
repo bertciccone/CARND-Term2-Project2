@@ -67,6 +67,15 @@ public:
   ///* Augmented state dimension
   int n_aug_;
 
+  // Augmented mean state vector
+  VectorXd x_aug_;
+
+  // Augmented covariance matrix
+  VectorXd P_aug_;
+
+  //create sigma point matrix
+  MatrixXd Xsig_aug_;
+
   ///* Sigma point spreading parameter
   double lambda_;
 

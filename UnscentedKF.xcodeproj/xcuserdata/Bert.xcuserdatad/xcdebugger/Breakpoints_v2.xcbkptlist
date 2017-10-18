@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/ukf.cpp"
+            timestampString = "529982393.134314"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "UKF::ProcessMeasurement(MeasurementPackage meas_package)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/ukf.cpp"
+            timestampString = "529982393.135216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
+            landmarkName = "UKF::Prediction(double delta_t)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/ukf.cpp"
+            timestampString = "529982393.135772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
+            landmarkName = "UKF::UpdateLidar(MeasurementPackage meas_package)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/ukf.cpp"
+            timestampString = "529982393.136314"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "426"
+            endingLineNumber = "426"
+            landmarkName = "UKF::UpdateRadar(MeasurementPackage meas_package)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UKF::UpdateRadar(MeasurementPackage)"
+                  moduleName = "UnscentedKF"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp"
+                  timestampString = "529982393.649445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "426"
+                  endingLineNumber = "426"
+                  offsetFromSymbolStart = "815">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UKF::UpdateRadar(MeasurementPackage)"
+                  moduleName = "UnscentedKF"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp"
+                  timestampString = "529982393.65366"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "426"
+                  endingLineNumber = "426"
+                  offsetFromSymbolStart = "855">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UKF::UpdateRadar(MeasurementPackage)"
+                  moduleName = "UnscentedKF"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp"
+                  timestampString = "529982393.658063"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "426"
+                  endingLineNumber = "426"
+                  offsetFromSymbolStart = "1434">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UKF::UpdateRadar(MeasurementPackage)"
+                  moduleName = "UnscentedKF"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp"
+                  timestampString = "529982393.662271"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "426"
+                  endingLineNumber = "426"
+                  offsetFromSymbolStart = "2457">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -210,7 +210,6 @@ void UKF::Prediction(double delta_t) {
     double psi_dot = Xsig_aug_(4, i); // rate of change of yaw angle
     double nu_a = Xsig_aug_(5, i); // from Lesson 7 Section 8, longitudinal acceleration noise
     double nu_psi_dot_dot = Xsig_aug_(6, i); // from Lesson 7 Section 8, yaw acceleration noise
-    double vel_div_psi_dot = vel / psi_dot;
     double psi_dot_mult_delta_t = psi_dot * delta_t;
     double psi_plus_psi_dot_delta_t = psi + psi_dot_mult_delta_t;
     double one_half_delta_t_squared = 0.5 * (delta_t * delta_t);
@@ -218,6 +217,7 @@ void UKF::Prediction(double delta_t) {
     double sin_psi = sin(psi);
     
     if (psi_dot) {
+      double vel_div_psi_dot = vel / psi_dot;
       // yaw rate psi dot is not zero; use first formula
       Xsig_pred_(0, i) =
         Xsig_aug_(0, i) +
@@ -294,6 +294,10 @@ void UKF::Prediction(double delta_t) {
       P_aug_ += weights_(i) * x_diff * x_diff.transpose();
     }
   }
+  std::cout << "x_aug_" << endl;
+  std::cout << x_aug_ << endl;
+  std::cout << "P_aug_" << endl;
+  std::cout << P_aug_ << endl;
 }
 
 /**

@@ -58,20 +58,20 @@ public:
   ///* Radar measurement noise standard deviation radius change in m/s
   double std_radrd_ ;
 
-  ///* Weights of sigma points
-  VectorXd weights_;
-
   ///* State dimension
   int n_x_;
 
   ///* Augmented state dimension
   int n_aug_;
 
+  ///* Weights of sigma points
+  VectorXd weights_;
+
   // Augmented mean state vector
   VectorXd x_aug_;
 
-  // Augmented covariance matrix
-  VectorXd P_aug_;
+  //create augmented state covariance
+  MatrixXd P_aug_;
 
   //create sigma point matrix
   MatrixXd Xsig_aug_;

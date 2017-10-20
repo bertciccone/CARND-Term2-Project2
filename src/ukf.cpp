@@ -15,7 +15,7 @@ UKF::UKF() {
   use_laser_ = true;
 
   // if this is false, radar measurements will be ignored (except during init)
-  use_radar_ = true;
+  use_radar_ = false;
 
   ///* State dimension
   n_x_ = 5;
@@ -38,13 +38,14 @@ UKF::UKF() {
   n_sig_ = 2 * n_aug_ + 1;
 
   ///* predicted sigma points matrix
-  Xsig_pred_ = MatrixXd(n_aug_, n_sig_);
+  Xsig_pred_ = MatrixXd(n_x_, n_sig_);
+  Xsig_pred_.setZero();
 
   // Process noise standard deviation longitudinal acceleration in m/s^2
-  std_a_ = 30; // TODO: experiment with this value
+  std_a_ = 10; // TODO: experiment with this value
 
   // Process noise standard deviation yaw acceleration in rad/s^2
-  std_yawdd_ = 30; // TODO: experiment with this value
+  std_yawdd_ = 20; // TODO: experiment with this value
 
   // Laser measurement noise standard deviation position1 in m
   std_laspx_ = 0.15;
@@ -77,7 +78,7 @@ UKF::UKF() {
   P_aug_ = MatrixXd(n_aug_, n_aug_);
   P_aug_.setZero();
 
-  //create sigma point matrix
+  //create augmented sigma point matrix
   Xsig_aug_ = MatrixXd(n_aug_, n_sig_);
   Xsig_aug_.setZero();
 
@@ -98,6 +99,7 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
   */
 
   /* INITIALIZATION */
+  /* Initialization structure similar to EKF Project */
 
   if (!is_initialized_) {
     // we can now finish initialization that is dependent on first measurement
@@ -134,6 +136,7 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
   }
 
   /* PREDICTION */
+  /* Control structure similar to EKF Project */
 
   float dt = (meas_package.timestamp_ - time_us_)/1000000.0;
   if (dt > 0.001) {
@@ -216,7 +219,7 @@ void UKF::Prediction(double delta_t) {
     double cos_psi = cos(psi);
     double sin_psi = sin(psi);
     
-    if (psi_dot) {
+    if (fabs(psi_dot) > 0.001) {
       double vel_div_psi_dot = vel / psi_dot;
       // yaw rate psi dot is not zero; use first formula
       Xsig_pred_(0, i) =
@@ -275,29 +278,28 @@ void UKF::Prediction(double delta_t) {
     }
 
     // predicted state mean
-    // use x_aug_ instead of x_
-    x_aug_.setZero();
+    x_.setZero();
     for (int i = 0; i < n_sig_; ++i) {
-      x_aug_ += weights_(i) * Xsig_pred_.col(i);
+      x_ += weights_(i) * Xsig_pred_.col(i);
     }
 
     // predicted state covariance matrix
 
     // state difference
-    VectorXd x_diff = Xsig_pred_.col(i) - x_aug_;
+    VectorXd x_diff = Xsig_pred_.col(i) - x_;
     //angle normalization
     while (x_diff(3) > M_PI) x_diff(3) -= 2. * M_PI;
     while (x_diff(3) < -M_PI) x_diff(3) += 2. * M_PI;
 
-    P_aug_.setZero();
+    P_.setZero();
     for (int i = 0; i < n_sig_; ++i) {
-      P_aug_ += weights_(i) * x_diff * x_diff.transpose();
+      P_ += weights_(i) * x_diff * x_diff.transpose();
     }
   }
-  std::cout << "x_aug_" << endl;
-  std::cout << x_aug_ << endl;
-  std::cout << "P_aug_" << endl;
-  std::cout << P_aug_ << endl;
+  std::cout << "x_" << endl;
+  std::cout << x_ << endl;
+  std::cout << "P_" << endl;
+  std::cout << P_ << endl;
 }
 
 /**
@@ -410,7 +412,7 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
 
   //calculate cross correlation matrix
   for (int i = 0; i < n_sig_; ++i) {
-    Tc += weights_(i) * (Xsig_pred_.col(i).head(n_x_) - x_) * (Zsig.col(i) - z_pred).transpose();
+    Tc += weights_(i) * (Xsig_pred_.col(i) - x_) * (Zsig.col(i) - z_pred).transpose();
   }
 
   //calculate Kalman gain K;

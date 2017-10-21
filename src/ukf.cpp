@@ -15,13 +15,16 @@ UKF::UKF() {
   use_laser_ = true;
 
   // if this is false, radar measurements will be ignored (except during init)
-  use_radar_ = false;
+  use_radar_ = true;
 
   ///* State dimension
   n_x_ = 5;
 
   ///* Augmented state dimension
   n_aug_ = 7;
+
+  // calculate the number of sigma points
+  n_sig_ = 2 * n_aug_ + 1;
 
   ///* Sigma point spreading parameter
   lambda_= 3 - n_x_;
@@ -32,17 +35,14 @@ UKF::UKF() {
   // initial covariance matrix
   P_ = MatrixXd(n_x_, n_x_).setIdentity();
 
-  // calculate the number of sigma points
-  n_sig_ = 2 * n_aug_ + 1;
-
   ///* predicted sigma points matrix
   Xsig_pred_ = MatrixXd(n_x_, n_sig_).setZero();
 
   // Process noise standard deviation longitudinal acceleration in m/s^2
-  std_a_ = 0.60; // TODO: experiment with this value
+  std_a_ = 2.0; // TODO: experiment with this value
 
   // Process noise standard deviation yaw acceleration in rad/s^2
-  std_yawdd_ = 0.60; // TODO: experiment with this value
+  std_yawdd_ = 2.5; // TODO: experiment with this value
 
   // Laser measurement noise standard deviation position1 in m
   std_laspx_ = 0.15;
@@ -315,7 +315,7 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
   MatrixXd R_ = MatrixXd(2, 2);
   R_ <<
     std_laspx_, 0,
-    0, std_laspx_;
+    0, std_laspy_;
 
   //measurement matrix
   MatrixXd H_ = MatrixXd(2, n_x_);
@@ -324,8 +324,7 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
     0, 1, 0, 0, 0;
 
   int n_z = 2;
-  VectorXd z = VectorXd(n_z);
-  z = meas_package.raw_measurements_;
+  VectorXd z = VectorXd(n_z) = meas_package.raw_measurements_;
   VectorXd z_pred = H_ * x_;
   VectorXd y = z - z_pred;
   MatrixXd Ht = H_.transpose();
@@ -335,9 +334,9 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
   MatrixXd K = PHt * Si;
 
   //new estimate
-  x_ = x_ + (K * y);
+  x_ += (K * y);
   long x_size = x_.size();
-  MatrixXd I = MatrixXd::Identity(x_size, x_size);
+  MatrixXd I = MatrixXd(x_size, x_size).setIdentity();
   P_ = (I - K * H_) * P_;
   std::cout << "UPDATE LIDAR" << endl;
   std::cout << "x_" << endl;
@@ -382,7 +381,7 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
     double rho = Xsig_pred_(3, i);
     double sqrt_px2_py2 = sqrt(px * px + py * py);
     Zsig(0, i) = sqrt_px2_py2;
-    Zsig(1, i) = atan(py / px);
+    Zsig(1, i) = atan2(py, px);
     Zsig(2, i) = (px * cos(rho) * vel + py * sin(rho) * vel) / sqrt_px2_py2;
   }
 
@@ -402,7 +401,7 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
     0, std_radphi_ * std_radphi_, 0,
     0, 0, std_radrd_ * std_radrd_;
 
-  S = S + R;
+  S += R;
 
   /* UPDATE RADAR */
   /* Lesson 7, Section 29 */

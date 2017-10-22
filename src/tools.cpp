@@ -36,8 +36,7 @@ VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
   //accumulate squared residuals
   for(int i=0; i < estimations.size(); ++i){
     // ... your code here
-    rmse.array() =
-      rmse.array() + pow(estimations[i].array() - ground_truth[i].array(), 2);
+    rmse.array() += pow(estimations[i].array() - ground_truth[i].array(), 2);
   }
 
   //calculate the mean

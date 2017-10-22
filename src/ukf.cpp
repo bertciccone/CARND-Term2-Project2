@@ -39,10 +39,10 @@ UKF::UKF() {
   Xsig_pred_ = MatrixXd(n_x_, n_sig_).setZero();
 
   // Process noise standard deviation longitudinal acceleration in m/s^2
-  std_a_ = 2.0; // TODO: experiment with this value
+  std_a_ = 2.35; // TODO: experiment with this value
 
   // Process noise standard deviation yaw acceleration in rad/s^2
-  std_yawdd_ = 2.5; // TODO: experiment with this value
+  std_yawdd_ = 3.46; // TODO: experiment with this value
 
   // Laser measurement noise standard deviation position1 in m
   std_laspx_ = 0.15;
@@ -147,6 +147,12 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
     UpdateRadar(meas_package);
   }
 
+  // print NIS values with spacing and caps for values above 95% threshold
+  std::cout <<
+    ((NIS_laser_ > 9.991) ? "        NIS LIDAR " : " nis lidar ") << NIS_laser_ <<
+    ((NIS_radar_ > 7.815) ? "        NIS RADAR " : " nis radar ") << NIS_radar_ <<
+    endl;
+
 }
 
 /**
@@ -185,12 +191,12 @@ void UKF::Prediction(double delta_t) {
   Xsig_aug_.col(0) = x_aug_;
 
   // calculate square root of (lambda + n_x)
-  double factor = sqrt(lambda_ + n_aug_);
+  double sqrt_lambda_n_aug = sqrt(lambda_ + n_aug_);
 
   // calculate remaining sigma points
   for (int i = 0; i < n_aug_; ++i) {
-    Xsig_aug_.col(i + 1) = x_aug_ + factor * A.col(i);
-    Xsig_aug_.col(i + 1 + n_aug_) = x_aug_ - factor * A.col(i);
+    Xsig_aug_.col(i + 1) = x_aug_ + sqrt_lambda_n_aug * A.col(i);
+    Xsig_aug_.col(i + 1 + n_aug_) = x_aug_ - sqrt_lambda_n_aug * A.col(i);
   }
 
   /* PREDICT SIGMA POINTS */
@@ -202,62 +208,45 @@ void UKF::Prediction(double delta_t) {
   
   for (int i = 0; i < n_sig_; ++i) {
     
+    double p_x = Xsig_aug_(0,i);
+    double p_y = Xsig_aug_(1,i);
     double vel = Xsig_aug_(2, i); // magnituded of velocity
-    double psi = Xsig_aug_(3, i); // yaw angle
-    double psi_dot = Xsig_aug_(4, i); // rate of change of yaw angle
+    double yaw = Xsig_aug_(3, i); // yaw angle
+    double yawd = Xsig_aug_(4, i); // rate of change of yaw angle
     double nu_a = Xsig_aug_(5, i); // from Lesson 7 Section 8, longitudinal acceleration noise
-    double nu_psi_dot_dot = Xsig_aug_(6, i); // from Lesson 7 Section 8, yaw acceleration noise
-    double psi_dot_mult_delta_t = psi_dot * delta_t;
-    double psi_plus_psi_dot_delta_t = psi + psi_dot_mult_delta_t;
-    double one_half_delta_t_squared = 0.5 * (delta_t * delta_t);
-    double cos_psi = cos(psi);
-    double sin_psi = sin(psi);
+    double nu_yawdd = Xsig_aug_(6, i); // from Lesson 7 Section 8, yaw acceleration noise
+    double yawd_dt = yawd * delta_t;
+    double yaw_yawd_dt = yaw + yawd_dt;
+    double half_delta_t_squared = 0.5 * (delta_t * delta_t);
+    double cos_yaw = cos(yaw);
+    double sin_yaw = sin(yaw);
     
-    if (fabs(psi_dot) > 0.001) {
-      double vel_div_psi_dot = vel / psi_dot;
+    if (fabs(yawd) > 0.001) {
+      double vel_div_psi_dot = vel / yawd;
       // yaw rate psi dot is not zero; use first formula
       Xsig_pred_(0, i) =
-        Xsig_aug_(0, i) +
-        vel_div_psi_dot * (sin(psi_plus_psi_dot_delta_t) - sin_psi) +
-        one_half_delta_t_squared * cos_psi * nu_a;
+        p_x +vel_div_psi_dot * (sin(yaw_yawd_dt) - sin_yaw) +
+        half_delta_t_squared * cos_yaw * nu_a;
       Xsig_pred_(1, i) =
-        Xsig_aug_(1, i) +
-        vel_div_psi_dot * (-cos(psi_plus_psi_dot_delta_t) + cos_psi) +
-        one_half_delta_t_squared * sin_psi * nu_a;
-      Xsig_pred_(2, i) =
-        Xsig_aug_(2, i) +
-        0 +
-        delta_t * nu_a;
-      Xsig_pred_(3, i) =
-        Xsig_aug_(3, i) +
-        psi_dot_mult_delta_t +
-        one_half_delta_t_squared * nu_psi_dot_dot;
-      Xsig_pred_(4, i) =
-        Xsig_aug_(4, i) +
-        0 +
-        delta_t * nu_psi_dot_dot;
+        p_y +
+        vel_div_psi_dot * (-cos(yaw_yawd_dt) + cos_yaw) +
+        half_delta_t_squared * sin_yaw * nu_a;
+      Xsig_pred_(2, i) = vel + 0 + delta_t * nu_a;
+      Xsig_pred_(3, i) = yaw + yawd_dt + half_delta_t_squared * nu_yawdd;
+      Xsig_pred_(4, i) = yawd + 0 + delta_t * nu_yawdd;
     } else {
       // yaw rate psi dot is zero; use second formula
       Xsig_pred_(0, i) =
-        Xsig_aug_(0, i) +
-        vel * cos_psi * delta_t +
-        one_half_delta_t_squared * cos_psi * nu_a;
+        p_x +
+        vel * cos_yaw * delta_t +
+        half_delta_t_squared * cos_yaw * nu_a;
       Xsig_pred_(1, i) =
-        Xsig_aug_(1, i) +
-        vel * sin_psi * delta_t +
-        one_half_delta_t_squared * sin_psi * nu_a;
-      Xsig_pred_(2, i) =
-        Xsig_aug_(2, i) +
-        0 +
-        delta_t * nu_a;
-      Xsig_pred_(3, i) =
-        Xsig_aug_(3, i) +
-        psi_dot_mult_delta_t +
-        one_half_delta_t_squared * nu_psi_dot_dot;
-      Xsig_pred_(4, i) =
-        Xsig_aug_(4, i) +
-        0 +
-        delta_t * nu_psi_dot_dot;
+        p_y +
+        vel * sin_yaw * delta_t +
+        half_delta_t_squared * sin_yaw * nu_a;
+      Xsig_pred_(2, i) = vel + 0 + delta_t * nu_a;
+      Xsig_pred_(3, i) = yaw + yawd_dt + half_delta_t_squared * nu_yawdd;
+      Xsig_pred_(4, i) = yawd + 0 + delta_t * nu_yawdd;
     }
 
     /* PREDICT MEAN AND COVARIANCE */
@@ -282,19 +271,14 @@ void UKF::Prediction(double delta_t) {
     // state difference
     VectorXd x_diff = Xsig_pred_.col(i) - x_;
     //angle normalization
-    while (x_diff(3) > M_PI) x_diff(3) -= 2. * M_PI;
-    while (x_diff(3) < -M_PI) x_diff(3) += 2. * M_PI;
+    x_diff(3) = atan2(sin(x_diff(3)), cos(x_diff(3)));
 
     P_.setZero();
     for (int i = 0; i < n_sig_; ++i) {
       P_ += weights_(i) * x_diff * x_diff.transpose();
     }
   }
-  std::cout << "PREDICTION" << endl;
-  std::cout << "x_" << endl;
-  std::cout << x_ << endl;
-  std::cout << "P_" << endl;
-  std::cout << P_ << endl;
+
 }
 
 /**
@@ -335,14 +319,12 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
 
   //new estimate
   x_ += (K * y);
-  long x_size = x_.size();
-  MatrixXd I = MatrixXd(x_size, x_size).setIdentity();
+  MatrixXd I = MatrixXd(x_.size(), x_.size()).setIdentity();
   P_ = (I - K * H_) * P_;
-  std::cout << "UPDATE LIDAR" << endl;
-  std::cout << "x_" << endl;
-  std::cout << x_ << endl;
-  std::cout << "P_" << endl;
-  std::cout << P_ << endl;
+
+  // lidar NIS calculation
+  NIS_laser_ = (z - z_pred).transpose() * Si * (z - z_pred);
+
 }
 
 /**
@@ -392,7 +374,8 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
 
   //calculate measurement covariance matrix S
   for (int i = 0; i < n_sig_; ++i) {
-    S += weights_(i) * (Zsig.col(i) - z_pred) * (Zsig.col(i) - z_pred).transpose();
+    S +=
+      weights_(i) * (Zsig.col(i) - z_pred) * (Zsig.col(i) - z_pred).transpose();
   }
 
   MatrixXd R = MatrixXd(n_z, n_z).setZero();
@@ -411,7 +394,8 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
 
   //calculate cross correlation matrix
   for (int i = 0; i < n_sig_; ++i) {
-    Tc += weights_(i) * (Xsig_pred_.col(i) - x_) * (Zsig.col(i) - z_pred).transpose();
+    Tc +=
+      weights_(i) * (Xsig_pred_.col(i) - x_) * (Zsig.col(i) - z_pred).transpose();
   }
 
   //calculate Kalman gain K;
@@ -430,9 +414,9 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   //update state mean and covariance matrix
   x_ += K * z_diff;
   P_ -= K * S * K.transpose();
-  std::cout << "UPDATE RADAR" << endl;
-  std::cout << "x_" << endl;
-  std::cout << x_ << endl;
-  std::cout << "P_" << endl;
-  std::cout << P_ << endl;
+
+  // radar NIS calculation
+  MatrixXd Si = S.inverse();
+  NIS_radar_ = (z - z_pred).transpose() * Si * (z - z_pred);
+
 }

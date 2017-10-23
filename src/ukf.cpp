@@ -53,6 +53,21 @@ UKF::UKF() {
   // Laser measurement noise standard deviation position2 in m
   std_laspy_ = 0.15;
 
+  // lidar measurement noise covariance
+  R_laser_ = MatrixXd(n_z_laser_, n_z_laser_);
+  R_laser_ <<
+    std_laspx_ * std_laspx_, 0,
+    0, std_laspy_ * std_laspy_;
+
+  // lidar measurement matrix
+  H_ = MatrixXd(n_z_laser_, n_x_);
+  H_ <<
+    1, 0, 0, 0, 0,
+    0, 1, 0, 0, 0;
+
+  // lidar measurement matrix transpose
+  Ht = H_.transpose();
+
   // Radar measurement noise standard deviation radius in m
   std_radr_ = 0.3;
 
@@ -61,6 +76,13 @@ UKF::UKF() {
 
   // Radar measurement noise standard deviation radius change in m/s
   std_radrd_ = 0.3;
+
+  // radar measurement noise covariance
+  R_radar_ = MatrixXd(n_z_radar_, n_z_radar_).setZero();
+  R_radar_ <<
+    std_radr_ * std_radr_, 0, 0,
+    0, std_radphi_ * std_radphi_, 0,
+    0, 0, std_radrd_ * std_radrd_;
 
   //create augmented mean vector
   x_aug_ = VectorXd(n_aug_).setZero();
@@ -162,6 +184,15 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
     ((NIS_radar_ > 7.815) ? "        NIS RADAR " : " nis radar ") << NIS_radar_ <<
     endl;
 
+}
+
+/**
+ * Normalizes the angle phi.
+ * @param {double} phi the angle that needs normalization
+ */
+void NormalizeAngle(double& phi)
+{
+  phi = atan2(sin(phi), cos(phi));
 }
 
 /**
@@ -275,7 +306,7 @@ void UKF::Prediction(double delta_t) {
       // state difference
       VectorXd x_diff = Xsig_pred_.col(i) - x_;
       //angle normalization
-      x_diff(3) = atan2(sin(x_diff(3)), cos(x_diff(3)));
+      NormalizeAngle(x_diff(3));
       P_ += weights_(i) * x_diff * x_diff.transpose();
     }
 
@@ -295,22 +326,11 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
   You'll also need to calculate the lidar NIS.
   */
 
-  // lidar measurement noise covariance
-  MatrixXd R_laser_ = MatrixXd(n_z_laser_, n_z_laser_);
-  R_laser_ <<
-    std_laspx_ * std_laspx_, 0,
-    0, std_laspy_ * std_laspy_;
-
-  //measurement matrix
-  MatrixXd H_ = MatrixXd(n_z_laser_, n_x_);
-  H_ <<
-    1, 0, 0, 0, 0,
-    0, 1, 0, 0, 0;
+  /* Lesson 5, Section 12 */
 
   VectorXd z = VectorXd(n_z_laser_) = meas_package.raw_measurements_;
   VectorXd z_pred = H_ * x_;
   VectorXd y = z - z_pred;
-  MatrixXd Ht = H_.transpose();
   MatrixXd S = H_ * P_ * Ht + R_laser_;
   MatrixXd Si = S.inverse();
   MatrixXd PHt = P_ * Ht;
@@ -341,6 +361,7 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   */
 
   /* PREDICT RADAR SIGMA POINTS */
+  /* Lesson 7, Section 26 */
 
   //create matrix for sigma points in measurement space
   MatrixXd Zsig = MatrixXd(n_z_radar_, n_sig_).setZero();
@@ -355,12 +376,15 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   for (int i = 0; i < n_sig_; ++i) {
     double px = Xsig_pred_(0, i);
     double py = Xsig_pred_(1, i);
+    if (px == 0 and py == 0) return; // atan2 would be undefined; skip update
     double vel = Xsig_pred_(2, i);
     double rho = Xsig_pred_(3, i);
     double sqrt_px2_py2 = sqrt(px * px + py * py);
+    double v1 = cos(rho) * vel;
+    double v2 = sin(rho) * vel;
     Zsig(0, i) = sqrt_px2_py2;
     Zsig(1, i) = atan2(py, px);
-    Zsig(2, i) = (px * cos(rho) * vel + py * sin(rho) * vel) / sqrt_px2_py2;
+    Zsig(2, i) = (px * v1 + py * v2) / sqrt_px2_py2;
   }
 
   //calculate mean predicted measurement
@@ -373,13 +397,6 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
     S +=
       weights_(i) * (Zsig.col(i) - z_pred) * (Zsig.col(i) - z_pred).transpose();
   }
-
-  // radar measurement noise covariance
-  MatrixXd R_radar_ = MatrixXd(n_z_radar_, n_z_radar_).setZero();
-  R_radar_ <<
-    std_radr_ * std_radr_, 0, 0,
-    0, std_radphi_ * std_radphi_, 0,
-    0, 0, std_radrd_ * std_radrd_;
 
   S += R_radar_;
 
@@ -405,8 +422,7 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   VectorXd z_diff = z - z_pred;
 
   //angle normalization
-  while (z_diff(1) > M_PI) z_diff(1) -= 2. * M_PI;
-  while (z_diff(1) < -M_PI) z_diff(1) += 2. * M_PI;
+  NormalizeAngle(z_diff(1));
 
   //update state mean and covariance matrix
   x_ += K * z_diff;

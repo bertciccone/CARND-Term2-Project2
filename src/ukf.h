@@ -22,14 +22,20 @@ public:
   ///* if this is false, radar measurements will be ignored (except for init)
   bool use_radar_;
 
+  ///* State dimension
+  int n_x_;
+
+  ///* Augmented state dimension
+  int n_aug_;
+
+  // number of sigma points
+  int n_sig_;
+  
   ///* state vector: [pos1 pos2 vel_abs yaw_angle yaw_rate] in SI units and rad
   VectorXd x_;
 
   ///* state covariance matrix
   MatrixXd P_;
-
-  // number of sigma points
-  int n_sig_;
 
   ///* predicted sigma points matrix
   MatrixXd Xsig_pred_;
@@ -37,17 +43,26 @@ public:
   ///* time when the state is true, in us
   long long time_us_;
 
+  ///* Sigma point spreading parameter
+  double lambda_;
+
   ///* Process noise standard deviation longitudinal acceleration in m/s^2
   double std_a_;
 
   ///* Process noise standard deviation yaw acceleration in rad/s^2
   double std_yawdd_;
 
+  //set measurement dimension, lidar can measure px, py
+  const int n_z_laser_ = 2;
+
   ///* Laser measurement noise standard deviation position1 in m
   double std_laspx_;
 
   ///* Laser measurement noise standard deviation position2 in m
   double std_laspy_;
+
+  //set measurement dimension, radar can measure r, phi, and r_dot
+  const int n_z_radar_ = 3;
 
   ///* Radar measurement noise standard deviation radius in m
   double std_radr_;
@@ -57,12 +72,6 @@ public:
 
   ///* Radar measurement noise standard deviation radius change in m/s
   double std_radrd_ ;
-
-  ///* State dimension
-  int n_x_;
-
-  ///* Augmented state dimension
-  int n_aug_;
 
   ///* Weights of sigma points
   VectorXd weights_;
@@ -75,9 +84,6 @@ public:
 
   //create sigma point matrix
   MatrixXd Xsig_aug_;
-
-  ///* Sigma point spreading parameter
-  double lambda_;
 
   // Normalized Innovation Squared (NIS) values
   double NIS_laser_;

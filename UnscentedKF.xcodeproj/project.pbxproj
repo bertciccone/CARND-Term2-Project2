@@ -34,45 +34,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2440AB06393A4159BC60D869 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */ = {isa = PBXBuildFile; fileRef = 5716228B00CD4D4F8542167B /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */; };
-		291DD08EC46343B083387E1A /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 33E668E3C26E4CDF8D31E3C4 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */; };
-		75A0F33A8E384CAAB205D180 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */ = {isa = PBXBuildFile; fileRef = 5A57BFC2E2FE4626A6C7D262 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */; };
-		B57D8D62AC3D480C9BBAA99D /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 734B3630DAC94B52AAE0F377 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */; };
-		CB61919B2F0742BDA60B589C /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */ = {isa = PBXBuildFile; fileRef = 72C85FD40A9748F782F58110 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */; };
-		CEBD8799E98848AE8A9CCE53 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */ = {isa = PBXBuildFile; fileRef = EB9095FED7374ED4BB3F24FE /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */; };
-		F60E560D1EAC4C7FA19A797F /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */ = {isa = PBXBuildFile; fileRef = 8D91A8961214485FB2092C6E /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */; };
+		2440AB06393A4159BC60D869 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5716228B00CD4D4F8542167B /* tools.cpp */; };
+		291DD08EC46343B083387E1A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33E668E3C26E4CDF8D31E3C4 /* main.cpp */; };
+		CEBD8799E98848AE8A9CCE53 /* ukf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB9095FED7374ED4BB3F24FE /* ukf.cpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		2E4765EEF3BE44EE8C9F909B /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		90FA2C5823DF4C64986BB808 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		9633888BCD584820904475C7 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		C8EA9CC5E1914EC89683A43D /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
 		AD1C32FF6CC74D71AD479A9D /* PBXContainerItemProxy */ = {
@@ -99,16 +64,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09125CA86B3E44CF9E37AE0C /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		33E668E3C26E4CDF8D31E3C4 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		5716228B00CD4D4F8542167B /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tools.cpp; path = src/tools.cpp; sourceTree = SOURCE_ROOT; };
-		5A57BFC2E2FE4626A6C7D262 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = measurement_package.h; path = src/measurement_package.h; sourceTree = SOURCE_ROOT; };
-		72C85FD40A9748F782F58110 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tools.h; path = src/tools.h; sourceTree = SOURCE_ROOT; };
-		734B3630DAC94B52AAE0F377 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		83B0BEAD46B1446D856B9D25 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		09125CA86B3E44CF9E37AE0C /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		33E668E3C26E4CDF8D31E3C4 /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		4C7D19531F9E29E000E47D4A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5716228B00CD4D4F8542167B /* tools.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tools.cpp; path = src/tools.cpp; sourceTree = SOURCE_ROOT; };
+		5A57BFC2E2FE4626A6C7D262 /* measurement_package.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = measurement_package.h; path = src/measurement_package.h; sourceTree = SOURCE_ROOT; };
+		72C85FD40A9748F782F58110 /* tools.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tools.h; path = src/tools.h; sourceTree = SOURCE_ROOT; };
+		734B3630DAC94B52AAE0F377 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		83B0BEAD46B1446D856B9D25 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		8CC2C4B197884837AB2957A2 /* UnscentedKF */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = UnscentedKF; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D91A8961214485FB2092C6E /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ukf.h; path = src/ukf.h; sourceTree = SOURCE_ROOT; };
-		EB9095FED7374ED4BB3F24FE /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ukf.cpp; path = src/ukf.cpp; sourceTree = SOURCE_ROOT; };
+		8D91A8961214485FB2092C6E /* ukf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ukf.h; path = src/ukf.h; sourceTree = SOURCE_ROOT; };
+		EB9095FED7374ED4BB3F24FE /* ukf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ukf.cpp; path = src/ukf.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -116,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				86F64E35AC5E42C7AB5DFCB3 /* CMake Rules */,
-				83B0BEAD46B1446D856B9D25 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */,
+				83B0BEAD46B1446D856B9D25 /* CMakeLists.txt */,
 			);
 			name = ZERO_CHECK;
 			sourceTree = "<group>";
@@ -132,6 +98,7 @@
 		3CD4F42DA4B140DD967B12C9 = {
 			isa = PBXGroup;
 			children = (
+				4C7D19531F9E29E000E47D4A /* README.md */,
 				9F2A16F908BF4E0082BF3119 /* UnscentedKF */,
 				6B395A848F144CC3A92A9FDC /* ALL_BUILD */,
 				23B21FD750DD4B658247FE2C /* ZERO_CHECK */,
@@ -143,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				87EF49A0BC9C4ABB85D8D3AB /* CMake Rules */,
-				09125CA86B3E44CF9E37AE0C /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */,
+				09125CA86B3E44CF9E37AE0C /* CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
@@ -165,9 +132,9 @@
 		8F1450D6B7014AF59B967094 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				33E668E3C26E4CDF8D31E3C4 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */,
-				5716228B00CD4D4F8542167B /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */,
-				EB9095FED7374ED4BB3F24FE /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */,
+				33E668E3C26E4CDF8D31E3C4 /* main.cpp */,
+				5716228B00CD4D4F8542167B /* tools.cpp */,
+				EB9095FED7374ED4BB3F24FE /* ukf.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
@@ -177,7 +144,7 @@
 			children = (
 				8F1450D6B7014AF59B967094 /* Source Files */,
 				F21ADEBD81A74DC88D1FE03E /* Header Files */,
-				734B3630DAC94B52AAE0F377 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */,
+				734B3630DAC94B52AAE0F377 /* CMakeLists.txt */,
 			);
 			name = UnscentedKF;
 			sourceTree = "<group>";
@@ -185,9 +152,9 @@
 		F21ADEBD81A74DC88D1FE03E /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A57BFC2E2FE4626A6C7D262 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */,
-				72C85FD40A9748F782F58110 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */,
-				8D91A8961214485FB2092C6E /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */,
+				5A57BFC2E2FE4626A6C7D262 /* measurement_package.h */,
+				72C85FD40A9748F782F58110 /* tools.h */,
+				8D91A8961214485FB2092C6E /* ukf.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
@@ -221,18 +188,14 @@
 				LastUpgradeCheck = 0900;
 			};
 			buildConfigurationList = ED04B6352F4F4BB992509C8B /* Build configuration list for PBXProject "UnscentedKF" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				9633888BCD584820904475C7 /* Debug */,
-				2E4765EEF3BE44EE8C9F909B /* Release */,
-				90FA2C5823DF4C64986BB808 /* MinSizeRel */,
-				C8EA9CC5E1914EC89683A43D /* RelWithDebInfo */,
-			);
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 3CD4F42DA4B140DD967B12C9;
-			projectDirPath = .;
+			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EAC3A008D0044CC4B56A84DF /* ALL_BUILD */,
@@ -243,21 +206,6 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36A49EC3D6914FEE978142BC = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
 		A23FF542DD2949539FBC421D /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,21 +215,6 @@ exit 0";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "make -C /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project -f /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		B5AD563CF3A44E0897E7EFE4 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
 			showEnvVarsInLog = 0;
 		};
 		C0658CC63BEC414C9122AEAB /* CMake Rules */ = {
@@ -302,9 +235,9 @@ exit 0";
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291DD08EC46343B083387E1A /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */,
-				2440AB06393A4159BC60D869 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */,
-				CEBD8799E98848AE8A9CCE53 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */,
+				291DD08EC46343B083387E1A /* main.cpp in Sources */,
+				2440AB06393A4159BC60D869 /* tools.cpp in Sources */,
+				CEBD8799E98848AE8A9CCE53 /* ukf.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +269,12 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -346,7 +282,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -359,20 +300,45 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -std=c++11";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/libuv/1.11.0/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-std=c++11",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = UnscentedKF;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -393,9 +359,12 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -403,7 +372,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
@@ -424,9 +398,12 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -434,7 +411,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -445,9 +427,12 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -455,7 +440,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
@@ -466,9 +456,12 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -476,7 +469,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -487,9 +485,12 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -497,7 +498,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -510,20 +516,42 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/libuv/1.11.0/lib,
+				);
 				OTHER_CPLUSPLUSFLAGS = "     -std=c++11";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = UnscentedKF;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -544,9 +572,12 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -554,7 +585,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -567,20 +603,45 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG   -std=c++11";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/libuv/1.11.0/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-std=c++11",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = UnscentedKF;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
@@ -603,20 +664,45 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -std=c++11";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/libuv/1.11.0/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-std=c++11",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = UnscentedKF;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -627,9 +713,12 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -637,7 +726,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};

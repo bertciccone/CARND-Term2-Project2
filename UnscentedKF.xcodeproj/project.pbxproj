@@ -9,9 +9,9 @@
 /* Begin PBXAggregateTarget section */
 		CBFDA877C1C64190BC952307 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 408A0D3ED43842C3B3031B7A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 05082720E47C482590086652 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				2C709287D1A9402190EFA138 /* CMake Rules */,
+				C0658CC63BEC414C9122AEAB /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -20,13 +20,13 @@
 		};
 		EAC3A008D0044CC4B56A84DF /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9AB3BEE8738447D5ACA964D6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 299475118C0E4824AA40DE18 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				726621FD04164792A8BD6788 /* CMake Rules */,
+				A23FF542DD2949539FBC421D /* CMake Rules */,
 			);
 			dependencies = (
-				FB58B5958C744FD39AEE3B18 /* PBXTargetDependency */,
-				6964F99B5F10485B8498DC62 /* PBXTargetDependency */,
+				856882410B5D4F8F93C250AD /* PBXTargetDependency */,
+				779694178866429C9E63BE67 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -34,62 +34,62 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		28E88305AD034397B00B3791 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 5CF4E3A8D029466985054AFC /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */; };
-		54BEC8703D2B4EE3B6358F31 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */ = {isa = PBXBuildFile; fileRef = CB9B792A76BB4921B3F0969C /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */; };
-		57DB813EC6A5498184457E16 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */ = {isa = PBXBuildFile; fileRef = 5D3CDF9D8D324281BD839C08 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */; };
-		67F465D9900D4642AD8FBC2A /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */ = {isa = PBXBuildFile; fileRef = 81CADB1857D14AF38A96D067 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */; };
-		B8F5E0F5D65249BDA0F59F40 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */ = {isa = PBXBuildFile; fileRef = C10A70CCFD3D416FA726B72F /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */; };
-		D92F267B16C540B0A3B3F517 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */ = {isa = PBXBuildFile; fileRef = 9DA8247C405C4811A691AAC3 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */; };
-		EC6CD25938C54B63BF38DC94 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 78F4D9AB0E6F452FA8DE42C5 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */; };
+		2440AB06393A4159BC60D869 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */ = {isa = PBXBuildFile; fileRef = 5716228B00CD4D4F8542167B /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */; };
+		291DD08EC46343B083387E1A /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 33E668E3C26E4CDF8D31E3C4 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */; };
+		75A0F33A8E384CAAB205D180 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */ = {isa = PBXBuildFile; fileRef = 5A57BFC2E2FE4626A6C7D262 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */; };
+		B57D8D62AC3D480C9BBAA99D /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 734B3630DAC94B52AAE0F377 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */; };
+		CB61919B2F0742BDA60B589C /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */ = {isa = PBXBuildFile; fileRef = 72C85FD40A9748F782F58110 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */; };
+		CEBD8799E98848AE8A9CCE53 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */ = {isa = PBXBuildFile; fileRef = EB9095FED7374ED4BB3F24FE /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */; };
+		F60E560D1EAC4C7FA19A797F /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */ = {isa = PBXBuildFile; fileRef = 8D91A8961214485FB2092C6E /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		0C40D8FC9E2A4F8C8A45B0F4 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		248A4D7107174461801464B8 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		CFC47DCD2D4946719D4A589D /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		ED1B053B0FFF40FC811367CC /* Release */ = {
+		2E4765EEF3BE44EE8C9F909B /* Release */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Release;
 		};
+		90FA2C5823DF4C64986BB808 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		9633888BCD584820904475C7 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		C8EA9CC5E1914EC89683A43D /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		51D5A21311C745BE83CD58AC /* PBXContainerItemProxy */ = {
+		AD1C32FF6CC74D71AD479A9D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2997F473BC864A4BADD01EE2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CBFDA877C1C64190BC952307;
 			remoteInfo = ZERO_CHECK;
 		};
-		6619B45A665344E5BD4A82FE /* PBXContainerItemProxy */ = {
+		C7CA7091E1CF4CCD9AD4A9A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2997F473BC864A4BADD01EE2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E6B39F2AA3EA4DABB209DA9A;
 			remoteInfo = UnscentedKF;
 		};
-		EB9BCDF62F2D412D977116F5 /* PBXContainerItemProxy */ = {
+		CBADE1CD39334B0AB7B3AE59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2997F473BC864A4BADD01EE2 /* Project object */;
 			proxyType = 1;
@@ -99,97 +99,97 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1DE2C972DDCA4C599381C2BD /* UnscentedKF */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = UnscentedKF; sourceTree = BUILT_PRODUCTS_DIR; };
-		57684E04B534498793347833 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		5CF4E3A8D029466985054AFC /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		5D3CDF9D8D324281BD839C08 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tools.cpp; path = src/tools.cpp; sourceTree = SOURCE_ROOT; };
-		78F4D9AB0E6F452FA8DE42C5 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		81CADB1857D14AF38A96D067 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ukf.h; path = src/ukf.h; sourceTree = SOURCE_ROOT; };
-		8D78D303E03B4C78B76EA538 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		9DA8247C405C4811A691AAC3 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ukf.cpp; path = src/ukf.cpp; sourceTree = SOURCE_ROOT; };
-		C10A70CCFD3D416FA726B72F /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tools.h; path = src/tools.h; sourceTree = SOURCE_ROOT; };
-		CB9B792A76BB4921B3F0969C /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = measurement_package.h; path = src/measurement_package.h; sourceTree = SOURCE_ROOT; };
+		09125CA86B3E44CF9E37AE0C /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		33E668E3C26E4CDF8D31E3C4 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		5716228B00CD4D4F8542167B /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tools.cpp; path = src/tools.cpp; sourceTree = SOURCE_ROOT; };
+		5A57BFC2E2FE4626A6C7D262 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = measurement_package.h; path = src/measurement_package.h; sourceTree = SOURCE_ROOT; };
+		72C85FD40A9748F782F58110 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tools.h; path = src/tools.h; sourceTree = SOURCE_ROOT; };
+		734B3630DAC94B52AAE0F377 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		83B0BEAD46B1446D856B9D25 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8CC2C4B197884837AB2957A2 /* UnscentedKF */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = UnscentedKF; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D91A8961214485FB2092C6E /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ukf.h; path = src/ukf.h; sourceTree = SOURCE_ROOT; };
+		EB9095FED7374ED4BB3F24FE /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ukf.cpp; path = src/ukf.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		1DA2F6FAC259406FA2C1E178 /* ZERO_CHECK */ = {
+		23B21FD750DD4B658247FE2C /* ZERO_CHECK */ = {
 			isa = PBXGroup;
 			children = (
-				D5F8911837444576B5E6377D /* CMake Rules */,
-				8D78D303E03B4C78B76EA538 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */,
+				86F64E35AC5E42C7AB5DFCB3 /* CMake Rules */,
+				83B0BEAD46B1446D856B9D25 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */,
 			);
 			name = ZERO_CHECK;
 			sourceTree = "<group>";
 		};
-		3F44996265334A5A9D515335 /* Source Files */ = {
+		28BFF028807642BFA09AE01F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				78F4D9AB0E6F452FA8DE42C5 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */,
-				5D3CDF9D8D324281BD839C08 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */,
-				9DA8247C405C4811A691AAC3 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		57D4BE165643465C90999B55 /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				D8AC6FFA7FE0456A995C22D2 /* CMake Rules */,
-				57684E04B534498793347833 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		64C2E9AD2DF34F80A2A72D21 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1DE2C972DDCA4C599381C2BD /* UnscentedKF */,
+				8CC2C4B197884837AB2957A2 /* UnscentedKF */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B2FBC13FE5124073AE4EDB7D /* Header Files */ = {
+		3CD4F42DA4B140DD967B12C9 = {
 			isa = PBXGroup;
 			children = (
-				CB9B792A76BB4921B3F0969C /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */,
-				C10A70CCFD3D416FA726B72F /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */,
-				81CADB1857D14AF38A96D067 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		B51F8A5B083643A989676625 = {
-			isa = PBXGroup;
-			children = (
-				C663C907B90B41DDAC2BE301 /* UnscentedKF */,
-				57D4BE165643465C90999B55 /* ALL_BUILD */,
-				1DA2F6FAC259406FA2C1E178 /* ZERO_CHECK */,
-				64C2E9AD2DF34F80A2A72D21 /* Products */,
+				9F2A16F908BF4E0082BF3119 /* UnscentedKF */,
+				6B395A848F144CC3A92A9FDC /* ALL_BUILD */,
+				23B21FD750DD4B658247FE2C /* ZERO_CHECK */,
+				28BFF028807642BFA09AE01F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C663C907B90B41DDAC2BE301 /* UnscentedKF */ = {
+		6B395A848F144CC3A92A9FDC /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				3F44996265334A5A9D515335 /* Source Files */,
-				B2FBC13FE5124073AE4EDB7D /* Header Files */,
-				5CF4E3A8D029466985054AFC /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */,
+				87EF49A0BC9C4ABB85D8D3AB /* CMake Rules */,
+				09125CA86B3E44CF9E37AE0C /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		86F64E35AC5E42C7AB5DFCB3 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		87EF49A0BC9C4ABB85D8D3AB /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		8F1450D6B7014AF59B967094 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				33E668E3C26E4CDF8D31E3C4 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */,
+				5716228B00CD4D4F8542167B /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */,
+				EB9095FED7374ED4BB3F24FE /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		9F2A16F908BF4E0082BF3119 /* UnscentedKF */ = {
+			isa = PBXGroup;
+			children = (
+				8F1450D6B7014AF59B967094 /* Source Files */,
+				F21ADEBD81A74DC88D1FE03E /* Header Files */,
+				734B3630DAC94B52AAE0F377 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeLists.txt */,
 			);
 			name = UnscentedKF;
 			sourceTree = "<group>";
 		};
-		D5F8911837444576B5E6377D /* CMake Rules */ = {
+		F21ADEBD81A74DC88D1FE03E /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A57BFC2E2FE4626A6C7D262 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/measurement_package.h */,
+				72C85FD40A9748F782F58110 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.h */,
+				8D91A8961214485FB2092C6E /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.h */,
 			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		D8AC6FFA7FE0456A995C22D2 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
+			name = "Header Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,18 +197,18 @@
 /* Begin PBXNativeTarget section */
 		E6B39F2AA3EA4DABB209DA9A /* UnscentedKF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92C4DE17131E47B49E20E007 /* Build configuration list for PBXNativeTarget "UnscentedKF" */;
+			buildConfigurationList = 8543EEDB01D6489C95A2D40C /* Build configuration list for PBXNativeTarget "UnscentedKF" */;
 			buildPhases = (
-				CADD695500CA4E87875818FD /* Sources */,
+				6A4D5FE1D41C4222A6347B49 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				41727134D45249429E03D877 /* PBXTargetDependency */,
+				C1FA187A5FAA45D89D23C0DA /* PBXTargetDependency */,
 			);
 			name = UnscentedKF;
 			productName = UnscentedKF;
-			productReference = 1DE2C972DDCA4C599381C2BD /* UnscentedKF */;
+			productReference = 8CC2C4B197884837AB2957A2 /* UnscentedKF */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -220,18 +220,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0900;
 			};
-			buildConfigurationList = 82AAC72BD7A240FC9B4EC8B8 /* Build configuration list for PBXProject "UnscentedKF" */;
+			buildConfigurationList = ED04B6352F4F4BB992509C8B /* Build configuration list for PBXProject "UnscentedKF" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				0C40D8FC9E2A4F8C8A45B0F4 /* Debug */,
-				ED1B053B0FFF40FC811367CC /* Release */,
-				248A4D7107174461801464B8 /* MinSizeRel */,
-				CFC47DCD2D4946719D4A589D /* RelWithDebInfo */,
+				9633888BCD584820904475C7 /* Debug */,
+				2E4765EEF3BE44EE8C9F909B /* Release */,
+				90FA2C5823DF4C64986BB808 /* MinSizeRel */,
+				C8EA9CC5E1914EC89683A43D /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = B51F8A5B083643A989676625;
+			mainGroup = 3CD4F42DA4B140DD967B12C9;
 			projectDirPath = .;
 			projectRoot = "";
 			targets = (
@@ -243,7 +243,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1020D389F89049728BE67E58 = {
+		36A49EC3D6914FEE978142BC = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,18 +258,7 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		2C709287D1A9402190EFA138 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project -f /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		726621FD04164792A8BD6788 /* CMake Rules */ = {
+		A23FF542DD2949539FBC421D /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,7 +269,7 @@ exit 0";
 			shellScript = "make -C /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project -f /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		F9F982017F7B49AEA3206F27 = {
+		B5AD563CF3A44E0897E7EFE4 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,41 +284,52 @@ exit 0";
 exit 0";
 			showEnvVarsInLog = 0;
 		};
+		C0658CC63BEC414C9122AEAB /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project -f /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CADD695500CA4E87875818FD /* Sources */ = {
+		6A4D5FE1D41C4222A6347B49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC6CD25938C54B63BF38DC94 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */,
-				57DB813EC6A5498184457E16 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */,
-				D92F267B16C540B0A3B3F517 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */,
+				291DD08EC46343B083387E1A /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/main.cpp */,
+				2440AB06393A4159BC60D869 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/tools.cpp */,
+				CEBD8799E98848AE8A9CCE53 /* /Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/src/ukf.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		41727134D45249429E03D877 /* PBXTargetDependency */ = {
+		779694178866429C9E63BE67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CBFDA877C1C64190BC952307 /* ZERO_CHECK */;
-			targetProxy = EB9BCDF62F2D412D977116F5 /* PBXContainerItemProxy */;
+			targetProxy = AD1C32FF6CC74D71AD479A9D /* PBXContainerItemProxy */;
 		};
-		6964F99B5F10485B8498DC62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CBFDA877C1C64190BC952307 /* ZERO_CHECK */;
-			targetProxy = 51D5A21311C745BE83CD58AC /* PBXContainerItemProxy */;
-		};
-		FB58B5958C744FD39AEE3B18 /* PBXTargetDependency */ = {
+		856882410B5D4F8F93C250AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E6B39F2AA3EA4DABB209DA9A /* UnscentedKF */;
-			targetProxy = 6619B45A665344E5BD4A82FE /* PBXContainerItemProxy */;
+			targetProxy = C7CA7091E1CF4CCD9AD4A9A8 /* PBXContainerItemProxy */;
+		};
+		C1FA187A5FAA45D89D23C0DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBFDA877C1C64190BC952307 /* ZERO_CHECK */;
+			targetProxy = CBADE1CD39334B0AB7B3AE59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		046EC3E6254A45539A1F5800 /* Debug */ = {
+		00CF7160987F4234B0495E8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -348,61 +348,9 @@ exit 0";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = Debug;
-		};
-		06641F7E93BE47CCBC25E0B7 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/build";
-			};
-			name = MinSizeRel;
-		};
-		1D11CA0064914DB2BA690481 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		29CEBADDD00E47DD9D24B2DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
 			name = Release;
 		};
-		5719B81CE74E4F3F84754920 /* Release */ = {
+		0DC9264CDA834D1EAC1E3BED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -428,28 +376,17 @@ exit 0";
 			};
 			name = Release;
 		};
-		63010170939245A7AABCEBAE /* Release */ = {
+		0FF701340A6243D68270E961 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/build";
 			};
-			name = Release;
+			name = MinSizeRel;
 		};
-		8B21FD22618C478BB34A3527 /* RelWithDebInfo */ = {
+		179DBFDB72714A348D721F78 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -470,7 +407,7 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		96E4F33C2CDA4FE7938C6705 /* Debug */ = {
+		40B064096FF748179B0D09AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -478,9 +415,51 @@ exit 0";
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/build";
 			};
+			name = Release;
+		};
+		54A0CCC8585B4B8DA1EB65D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
 			name = Debug;
 		};
-		A2BEA7FCD87E44ED8CD63FA5 /* MinSizeRel */ = {
+		5F488C0C7EBB4D4B8C564E82 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		60ABABAA5BDA4DFAACB027C9 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -501,17 +480,28 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		A9CACB62768F453296C012C7 /* Release */ = {
+		7677CD7B59C246E6838BF5FA /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/build";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = Release;
+			name = MinSizeRel;
 		};
-		B28A082C9B8640A6B7DAF8EA /* Debug */ = {
+		86435E7A7C4F4C28ADD62824 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -537,33 +527,38 @@ exit 0";
 			};
 			name = Debug;
 		};
-		CBFA2CB7C8D24B49B5E0E92A /* MinSizeRel */ = {
+		8E54809E58644CC8B39E7B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project/build";
+			};
+			name = Debug;
+		};
+		A1AD079DE319465C8D8CCD20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
 				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -std=c++11";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
+				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = UnscentedKF;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = MinSizeRel;
+			name = Release;
 		};
-		CE35D9909ACB44798539AD0F /* RelWithDebInfo */ = {
+		A50F2A3CD9164D46ADFC5666 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -589,28 +584,7 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		E52713DB2C6D444BA64EDAF8 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		E8D53856D25B429CB1B49BE7 /* RelWithDebInfo */ = {
+		C725E7027A4A4035B3EAE313 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -620,7 +594,33 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		EE84A5E1F2A84CA79E9A4F9B /* MinSizeRel */ = {
+		CD49F6A9E97940E9B3DA63A2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -std=c++11";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = UnscentedKF;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DB9C890FF9F54891AE365A81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -633,57 +633,57 @@ exit 0";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Bert/Projects/Udacity/CARND/term2/projects/CARND-Term2-Project2/CarND-Unscented-Kalman-Filter-Project";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = MinSizeRel;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		408A0D3ED43842C3B3031B7A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		05082720E47C482590086652 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D11CA0064914DB2BA690481 /* Debug */,
-				29CEBADDD00E47DD9D24B2DD /* Release */,
-				A2BEA7FCD87E44ED8CD63FA5 /* MinSizeRel */,
-				8B21FD22618C478BB34A3527 /* RelWithDebInfo */,
+				DB9C890FF9F54891AE365A81 /* Debug */,
+				A1AD079DE319465C8D8CCD20 /* Release */,
+				60ABABAA5BDA4DFAACB027C9 /* MinSizeRel */,
+				179DBFDB72714A348D721F78 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		82AAC72BD7A240FC9B4EC8B8 /* Build configuration list for PBXProject "UnscentedKF" */ = {
+		299475118C0E4824AA40DE18 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96E4F33C2CDA4FE7938C6705 /* Debug */,
-				A9CACB62768F453296C012C7 /* Release */,
-				06641F7E93BE47CCBC25E0B7 /* MinSizeRel */,
-				E8D53856D25B429CB1B49BE7 /* RelWithDebInfo */,
+				54A0CCC8585B4B8DA1EB65D2 /* Debug */,
+				00CF7160987F4234B0495E8A /* Release */,
+				7677CD7B59C246E6838BF5FA /* MinSizeRel */,
+				5F488C0C7EBB4D4B8C564E82 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		92C4DE17131E47B49E20E007 /* Build configuration list for PBXNativeTarget "UnscentedKF" */ = {
+		8543EEDB01D6489C95A2D40C /* Build configuration list for PBXNativeTarget "UnscentedKF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B28A082C9B8640A6B7DAF8EA /* Debug */,
-				5719B81CE74E4F3F84754920 /* Release */,
-				CBFA2CB7C8D24B49B5E0E92A /* MinSizeRel */,
-				CE35D9909ACB44798539AD0F /* RelWithDebInfo */,
+				86435E7A7C4F4C28ADD62824 /* Debug */,
+				0DC9264CDA834D1EAC1E3BED /* Release */,
+				CD49F6A9E97940E9B3DA63A2 /* MinSizeRel */,
+				A50F2A3CD9164D46ADFC5666 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9AB3BEE8738447D5ACA964D6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		ED04B6352F4F4BB992509C8B /* Build configuration list for PBXProject "UnscentedKF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				046EC3E6254A45539A1F5800 /* Debug */,
-				63010170939245A7AABCEBAE /* Release */,
-				EE84A5E1F2A84CA79E9A4F9B /* MinSizeRel */,
-				E52713DB2C6D444BA64EDAF8 /* RelWithDebInfo */,
+				8E54809E58644CC8B39E7B32 /* Debug */,
+				40B064096FF748179B0D09AE /* Release */,
+				0FF701340A6243D68270E961 /* MinSizeRel */,
+				C725E7027A4A4035B3EAE313 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

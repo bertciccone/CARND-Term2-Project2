@@ -61,6 +61,15 @@ public:
   ///* Laser measurement noise standard deviation position2 in m
   double std_laspy_;
 
+  // lidar measurement noise covariance
+  MatrixXd R_laser_;
+
+  // lidar measurement matrix
+  MatrixXd H_;
+
+  // lidar measurement matrix transpose
+  MatrixXd Ht;
+
   //set measurement dimension, radar can measure r, phi, and r_dot
   const int n_z_radar_ = 3;
 
@@ -72,6 +81,9 @@ public:
 
   ///* Radar measurement noise standard deviation radius change in m/s
   double std_radrd_ ;
+
+  // radar measurement noise covariance
+  MatrixXd R_radar_;
 
   ///* Weights of sigma points
   VectorXd weights_;
